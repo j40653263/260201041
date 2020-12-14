@@ -1,13 +1,7 @@
-gpa = float(input("Enter your GPA: "))
-numberOfLecture = int(input("Enter number of lecture: "))
-
-if gpa<2.0:
-  if numberOfLecture<47:
-    print("Not enough number of lectures and GPA!")
-  else:
-    print("Not enough GPA!")
-else:
-  if numberOfLecture<47:
-    print("Not enough number of lectures!")
-  else:
-    print("GRADUATED!!!")
+a = 2
+b = 6
+c = -20
+x1 = (b + (b**2 - 4*a*c)**0.5) / (2*a)
+x2 = (b - (b**2 - 4*a*c)**0.5) / (2*a)
+print(x1)
+print(x2)

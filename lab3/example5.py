@@ -1,17 +1,39 @@
-n = int(input("Enter the number: "))
-res = 1
-if n<0:
-  res = "Cannot calculate!!!"
-for i in range(2,n+1):
-    res = res*i
-print(str(n)+"! =",res)
+month = int(input("Enter a month: "))
+day = int(input("Enter a day: "))
 
-value = list(str(res))
-trailing_zeros = 0
-value.reverse()
-for i in range(len(value)):
-  if value[i] == "0":
-    trailing_zeros +=1
-  else:
-    break
-print(str(n) + " factorial" + " has " + str(trailing_zeros) + " trailing_zeros")
+if 3<=month<=6:
+    if month==3:
+        if day>=20:
+            season = "Spring"
+        else:
+            season = "Winter"
+    elif month==6:
+        if day<21:
+            season = "Spring"
+        else:
+            season = "Summer"
+    else:
+        season = "Spring"
+
+elif month<=9:
+    if month == 9:
+        if day<22:
+            season = "Summer"
+        else:
+            season = "Fall"
+    else:
+        season = "Summer"
+
+elif month<=11:
+    if month==11:
+        if day<21:
+            season = "Fall"
+        else:
+            season = "Winter"
+    else:
+        season = "Fall"
+
+else:
+    season = "Winter"
+
+print("The season is",season)

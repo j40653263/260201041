@@ -1,9 +1,13 @@
-n = int(input("Enter a number for identity matrix: "))
-for i in range(0,n):
-    for j in range(0,n):
-        if i == j:
-            print("1",end=" ")
-        else:
-            print("0",end=" ")
+pw = input("Enter password: ")
+correctPw = "abc123"
 
-    print()
+while True:
+    if pw == correctPw:
+        print("Welcome!")
+        break
+    elif pw == "help":
+        print(correctPw[0])
+        pw = input("Enter password: ")
+    else:
+        print("Wrong")
+        pw = input("Enter password: ")

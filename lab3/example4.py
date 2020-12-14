@@ -1,14 +1,9 @@
-a = int(input("a="))
-b = int(input("b="))
-
-res = 1
-if b<0:
-  for i in range(1,-1*b+1): 
-      res *= 1/a
-elif a==0 and b==0:
-  res = "Cannot calculate!!!"
+age = int(input("How old are you?: "))
+fee = 3
+if age<6 or age>60:
+    print("Free!")
+elif age<=18:
+    d_fee = fee - fee*0.5
+    print("Ticket fee: ",d_fee,"TL")
 else:
-  for i in range(1,b+1):
-      res = res*a 
-
-print("a^b:",res)
+    print("Ticket fee: ",fee,"TL")

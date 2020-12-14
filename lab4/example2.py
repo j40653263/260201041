@@ -1,8 +1,17 @@
-n = int(input("How many numbers? "))
-count = 0
-for i in range(n):
-    x = int(input("Enter an integer: "))
-    if x%2==0:
-        count += 1
-res = (count/n)*100
-print(str(res)+"%")
+year = int(input("Enter the year: "))
+
+if year % 4 == 0:
+    if year % 100 == 0:
+        if year % 400 == 0:
+            leap_year = True
+        else:
+            leap_year = False
+    else:
+        leap_year = True
+else:
+    leap_year = False
+    
+if leap_year:
+    print(year,"is a leap year")
+else:
+    print(year,"is not a leap year")

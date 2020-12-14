@@ -1,15 +1,16 @@
-square_matrix = int(input("How many columns&rows in your square matrix: "))
-print("Okey, you have",square_matrix,"colums&rows in your square matrix!")
-print("Please enter your square matrix line by line:")
+a = int(input("How many Fibonacci numbers to generate: "))
+x,y = 0,1
+for i in range(a):
+    print(y,end=" ")
+    x,y = y,x+y
+
 print()
-
-trace_matrix = []
-for i in range(square_matrix):
-  x = input().split(" ")
-  trace_matrix.append(x[i])
-
-output = 0
-for i in trace_matrix:
-  output += int(i)
-
-print("Output:",output)
+"""
+b = int(input("How many Fibonacci numbers to generate: "))
+x,y = 0,1
+count = 0
+while count<b:
+  print(y,end=" ")
+  x,y = y,x+y
+  count +=1
+"""

@@ -1,14 +1,14 @@
-books = ["ULYSSES","ANIMAL FARM","BRAVE NEW WORLD","ENDER'S GAME"]
+grades = [[50,90,60],[15,60,75],[99,95,91]]
+aa = []
+average = []
+for i in range(len(grades)):
+    student = grades[i]
+    grade = student[0]*0.3 + student[1]*0.3 + student[2]*0.4
+    average.append(grade)
+    if grade >= 90:
+        aa.append(i)
 
-book_dict = {}
-for i in books:
-    book_dict[i] = (len(i),len(set(i)))
-for k,v in book_dict.items():
-    print(k,"---->",v)
-
-for i in books:
-    a = len(i)
-    b = len(set(i))
-    book_dict[i] = (a,b,float((a+b)/2))
-for k,v in book_dict.items():
-    print(k,"---->",v)   
+print("Average grades are:",average)
+print("AA students:")
+for i in aa:
+    print(i)

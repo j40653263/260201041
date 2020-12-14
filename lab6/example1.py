@@ -1,11 +1,15 @@
-list0 = [("Jon",15), ("Ned",45), ("Arya",9), ("Catelyn",44), ("Bran",10)]
+mail = input("Enter an email: ")
+mail=mail.lower()
+target = "ceng113@example.com"
 
-for i in list0:
-  if i[1]>18:  #i[1] = age > 18
-    print(i[0]) #i[0] = name
+index_of_at = mail.index("@")
+mail_before_at = mail[0:index_of_at]
+mail_after_at = mail[index_of_at:]
 
-""""
-for name,age in list0:
-  if age>18:
-    print(name)
-"""
+mail_before_at = mail_before_at.replace(".","")
+mail = mail_before_at + mail_after_at
+
+if mail == target:
+    print("It is correct email address.")
+else:
+    print("It is wrong!")
